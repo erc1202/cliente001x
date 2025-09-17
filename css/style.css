@@ -6,7 +6,7 @@
 }
 
 body{
-    background:rgba(255, 254, 174, 0.726) /*COR FUNDO */
+    background:rgba(194, 223, 255, 0.726) /*COR FUNDO */
 }
 header {
     display: flex ; /* FLEXBOX */
