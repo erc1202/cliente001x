@@ -1,0 +1,24 @@
+/* Reset CSS */ 
+* {
+    margin: 0; /*Margem externa*/
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:rgba(255, 254, 174, 0.726) /*COR FUNDO */
+}
+header {
+    display: flex ; /* FLEXBOX */
+    justify-content:space-between; /*espaçamento das divs, ou seja, alinhamento horizontal, eixo "x"*/
+    align-items: center; /*alinhamento vertical, como se fosse o eixo "y"*/
+    width: 100%; /*largura*/
+    padding: 0.5rem 1rem ; /*.5 cima e baixo; 1 direita e esquerda */
+    border-bottom: 1px solid #000c5b;
+    position: fixed;
+    
+}
+
+h1{
+    padding-top: 1200px;
+}
