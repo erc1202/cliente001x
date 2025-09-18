@@ -28,7 +28,23 @@ h1{
     display: none;
 
 }
+/* ul */
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 1.6rem;
 
+}
+
+/*text-link*/
+.text-link {
+    text-decoration: none;
+}
+
+/*span */
+.menu-text {
+    text-transform: uppercase;
+}
 
 
 
