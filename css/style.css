@@ -1,3 +1,25 @@
+/* COR DARK */
+:root,
+:root[data-theme='dark'] {
+
+    --cor--fundo: #323232;
+    --txt-menu-link:rgb(228, 228, 228);
+    --borda: rgb(228, 228, 228);
+    --icon-theme: rgb(228, 228, 228);
+
+}
+
+/* COR LIGHT*/
+:root,
+:root[data-theme='light'] {
+
+    --cor--fundo: rgb(228, 228, 228);
+    --txt-menu-link: #323232;
+    --borda: #323232;
+    --icon-theme: #323232;
+
+}
+
 /* Reset CSS */ 
 * {
     margin: 0; /*Margem externa*/
@@ -6,7 +28,7 @@
 }
 
 body{
-    background:rgb(132, 201, 173) /*COR FUNDO */
+    background:var(--cor--fundo) /*COR FUNDO */
 }
 header {
     display: flex ; /* FLEXBOX */
@@ -14,14 +36,14 @@ header {
     align-items: center; /*alinhamento vertical, como se fosse o eixo "y"*/
     width: 100%; /*largura*/
     padding: 0.5rem 1rem ; /*.5 cima e baixo; 1 direita e esquerda */
-    border-bottom: 2px solid #35866f;
+    border-bottom: 2px solid var(--borda);
     position: fixed;
+    z-index: 9999; /* Camadas */
+    background: var(--cor--fundo);
+
     
 }
 
-h1{
-    padding-top: 1200px;
-}
 
 /*nav */
 .menu-desktop {
@@ -37,13 +59,37 @@ h1{
 }
 
 /*text-link*/
-.text-link {
+.menu-link {
     text-decoration: none;
 }
 
 /*span */
 .menu-text {
     text-transform: uppercase;
+    color: var(--txt-menu-link);
+}
+
+#toggleTheme {
+    color: var(--icon-theme);
+    cursor: pointer; /* aparencia cursor */
+    
+}
+
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX (); /*100%*/
+    background: rgb(132, 0, 255);
+    width: 75%;
+    display:flex;
+    flex-direction: column;
+    max-width: 320px;
+    padding-top: 4rem;
+    height: 100vh; /*viewport height*/
+    border-left: 1px solid var(--borda);
+
+
 }
 
 

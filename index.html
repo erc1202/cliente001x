@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
 
   <head>
     <meta charset="UTF-8" />
@@ -20,7 +20,7 @@
         <ul class="menu menu-principal"> <!--lista não ordenada-->
 
           <li class="menu">
-            <a href="" class="text-link">
+            <a href="" class="menu-link">
               <span class="menu-text">
                 Home
               </span>
@@ -28,7 +28,7 @@
           </li>
 
           <li>
-            <a href="" class="text-link">
+            <a href="" class="menu-link">
               <span class="menu-text">
                 Projetos
               </span>
@@ -36,7 +36,7 @@
           </li>
 
           <li>
-            <a href="" class="text-link">
+            <a href="" class="menu-link">
               <span class="menu-text">
                 Sobre
               </span>
@@ -44,7 +44,7 @@
           </li>
 
           <li>
-            <a href="" class="text-link">
+            <a href="" class="menu-link">
               <span class="menu-text">
                 Contato
               </span>
@@ -56,29 +56,69 @@
 
       <div> <!--LOGO-->
         <a href="#home"> 
-          <img src="logo.png" ="">
+          <img src="logo.png" >
         </a>
       </div>
 
-      <div> <!--ICONE TROCAR COR TEMA -->
-        <i>
-          <i class="bi bi-sun"></i>
-        </i>
-        <button>
-          <i> <!--botão lista mobile- só ira aparecer na tela mobile-->
+      <!--ICONE TROCAR COR TEMA -->
+
+      <div class="header-toggle">
+        <i class="bi bi-sun" id="toggleTheme"></i>
+        <button id="menuHamburguer" class="btn-menu-mobile">
+         <!--botão lista mobile- só ira aparecer na tela mobile-->
             <i class="bi bi-list"></i>
-          </i>
         </button>
 
       </div>
 
     </header>
 
-    <h1>
-      Olá mundo!!
-    </h1>
-    <div>
-      <p></p>
-    </div>
+    <!--Menu Lista Mobile-->
+    <nav id="menuMobile" class="meu menu-mobile">
+      <ul class="menu-list"> 
+
+          <li>
+            <a href="" class="menu-link">
+              <span class="menu-text">
+                Home
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="" class="menu-link">
+              <span class="menu-text">
+                Projetos
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="" class="menu-link">
+              <span class="menu-text">
+                Sobre
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="" class="menu-link">
+              <span class="menu-text">
+                Contato
+              </span>
+            </a>
+          </li>
+
+        </ul>
+     
+
+    </nav>
+
+    <!--JS-->
+
+    <script src="js/script.js"></script>
+
+
   </body>
+
 </html>
