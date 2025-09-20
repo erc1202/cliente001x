@@ -48,6 +48,7 @@ header {
 /*nav */
 .menu-desktop {
     display: none;
+    padding: .5rem;
 
 }
 /* ul */
@@ -79,30 +80,79 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    transform: translateX (); /*100%*/
+    transform: translateX(100%); /*100%*/
     background: rgb(132, 0, 255);
     width: 75%;
-    display:flex;
+    display: flex;
     flex-direction: column;
     max-width: 320px;
     padding-top: 4rem;
     height: 100vh; /*viewport height*/
     border-left: 1px solid var(--borda);
+    align-items: center
+
+
+}
+
+.menu-mobile.active {
+    transform: translateX(0%);
+
 
 
 }
 
 
+/* .lista-mobile {
+    padding-top: 4rem;
+    text-align: center;
+    list-style: none;
+
+} */
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+
+}
+
+.btn-menu-mobile {
+    background: transparent;
+    border: none;
+    color: var(--icon-theme);
+    font-size: 1.3rem;
+    margin-left: 1rem; /* distancia entre o sol e a lista */
+    align-items: center;
+    justify-content: center;
+    display:flex ;
+    padding: .5rem;
+
+}
+
+.header-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu-item {
+    text-align: center;
+
+}
+
+/* Herança */
+.menu-link.active .menu-text,
+.menu-link:hover .menu-text {
+    color: cornflowerblue
+}
 
 
-
-
-
-
-
-
-
-
+section {
+    padding-top: 150px;
+    color: #fff;
+}
 
 
 
@@ -112,4 +162,13 @@ header {
     .menu-desktop {
         display: flex;
     }
+
+    .btn-menu-mobile {
+        display: none; /* Em telas Menu Hamburger some */
+
+
+
+    }
+
+
 }
