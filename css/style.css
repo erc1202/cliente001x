@@ -1,3 +1,63 @@
+/* Google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Nixie+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ultra&display=swap');
+
+
+/* 
+
+Roboto
+// <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+Ultra-regular
+.ultra-regular {
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+Alan Sans
+// <weight>: Use a value from 300 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.alan-sans-<uniquifier> {
+  font-family: "Alan Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+Nixie-one-regular 
+.nixie-one-regular {
+  font-family: "Nixie One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+
+*/
+
+/* FONTES */
+:root {
+--fonte-titulo-h1:
+--fonte-textos:
+--fonte-subtitulos-h2:
+--fonte-subtitulos-h3:
+
+}
+
 /* COR DARK */
 :root,
 :root[data-theme='dark'] {
@@ -6,7 +66,8 @@
     --txt-menu-link:rgb(228, 228, 228);
     --borda: rgb(228, 228, 228);
     --icon-theme: rgb(228, 228, 228);
-
+    --cor-titulo: #c885f8;
+    --cor-textos: rgb(228, 228, 228);
 }
 
 /* COR LIGHT*/
@@ -17,7 +78,16 @@
     --txt-menu-link: #323232;
     --borda: #323232;
     --icon-theme: #323232;
+    --cor-titulo: #49007d;
+    --cor-textos: #323232;
 
+}
+
+/*Aparencia barra de rolagem*/
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor--fundo)
 }
 
 /* Reset CSS */ 
@@ -145,16 +215,45 @@ header {
 /* Herança */
 .menu-link.active .menu-text,
 .menu-link:hover .menu-text {
-    color: cornflowerblue
+    color: rgb(217, 184, 0)
 }
 
 
-section {
-    padding-top: 150px;
-    color: #fff;
+
+h1 {
+    font-size: 2.5rem;
+    font-family:  "Alan Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    letter-spacing: 1px;
+    color:var(--cor-titulo);
+
 }
 
+p {
+    color: var(--cor-textos)
+}
 
+/* Reaproveitar para as seções*/ 
+
+#home {
+    padding: 3.5rem 1rem;
+    background: rgb(255, 220, 42);
+}
+
+/* FlexBox da HOME*/
+#home {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+}
 
 /* Responsividade */
 /* A partir de 768px o dispositivo deve usar essa resolução */
@@ -166,9 +265,29 @@ section {
     .btn-menu-mobile {
         display: none; /* Em telas Menu Hamburger some */
 
+    }
 
+    h1 { 
+        font-size: 5rem;
 
     }
 
+}
+
+/*Telas > 992px */
+@media (min-width: 992px) {
+    h1 {
+        font-size: 6rem;
+
+    }
+
+}
+
+/* Telas > 1400px */
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 6.25rem;
+
+    }
 
 }
