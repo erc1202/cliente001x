@@ -51,10 +51,10 @@ Nixie-one-regular
 
 /* FONTES */
 :root {
---fonte-titulo-h1:
---fonte-textos:
---fonte-subtitulos-h2:
---fonte-subtitulos-h3:
+    --fonte-titulo-h1: "Montserrat", sans-serif;
+    --fonte-textos: "Ubuntu", sans-serif;
+    --fonte-subtitulo-h2: "Special Elite", system-ui;
+    --fonte-subtitulo-h3: "Cinzel", serif;
 
 }
 
@@ -63,26 +63,31 @@ Nixie-one-regular
 :root[data-theme='dark'] {
 
     --cor--fundo: #323232;
-    --txt-menu-link:rgb(228, 228, 228);
-    --borda: rgb(228, 228, 228);
-    --icon-theme: rgb(228, 228, 228);
-    --cor-titulo: #c885f8;
-    --cor-textos: rgb(228, 228, 228);
+    --txt-menu-link:rgb(188, 188, 188);
+    --borda: rgb(188, 188, 188);
+    --icon-theme: rgb(188, 188, 188);
+    --cor-titulo: #000000;
+    --cor-textos: rgb(57, 56, 56);
+     --hover-link: #dfdada;
 }
 
 /* COR LIGHT*/
 :root,
 :root[data-theme='light'] {
 
-    --cor--fundo: rgb(228, 228, 228);
+    --cor--fundo: rgb(216, 216, 216);
     --txt-menu-link: #323232;
     --borda: #323232;
     --icon-theme: #323232;
-    --cor-titulo: #49007d;
+    --cor-titulo: rgb(105, 104, 104);
     --cor-textos: #323232;
+    --hover-link: rgb(216, 216, 216);
 
 }
 
+html[data-theme="light"] .logo{
+    filter: invert(1);  /*inverte a cor da imagem*/
+}
 /*Aparencia barra de rolagem*/
 html {
     scroll-behavior: smooth;
@@ -105,7 +110,7 @@ header {
     justify-content:space-between; /*espaçamento das divs, ou seja, alinhamento horizontal, eixo "x"*/
     align-items: center; /*alinhamento vertical, como se fosse o eixo "y"*/
     width: 100%; /*largura*/
-    padding: 0.5rem 1rem ; /*.5 cima e baixo; 1 direita e esquerda */
+    padding: 0.1rem 1rem ; /*.5 cima e baixo; 1 direita e esquerda */
     border-bottom: 2px solid var(--borda);
     position: fixed;
     z-index: 9999; /* Camadas */
@@ -114,6 +119,10 @@ header {
     
 }
 
+.logo {  /*para ir de px para rem, dividir por 16 */
+    width: 2rem ; /*comprimento*/
+    right: auto; /*altura*/
+}
 
 /*nav */
 .menu-desktop {
@@ -151,7 +160,7 @@ header {
     top: 0;
     right: 0;
     transform: translateX(100%); /*100%*/
-    background: rgb(132, 0, 255);
+    background: rgb(180, 102, 253);
     width: 75%;
     display: flex;
     flex-direction: column;
@@ -215,7 +224,7 @@ header {
 /* Herança */
 .menu-link.active .menu-text,
 .menu-link:hover .menu-text {
-    color: rgb(217, 184, 0)
+    color: rgb(255, 239, 146)
 }
 
 
@@ -239,7 +248,7 @@ p {
 
 #home {
     padding: 3.5rem 1rem;
-    background: rgb(255, 220, 42);
+    background: rgb(255, 234, 128);
 }
 
 /* FlexBox da HOME*/
@@ -253,6 +262,18 @@ p {
     flex-direction: column;
     gap: 1.2rem;
 
+}
+
+/*Herança*/
+
+.menu-social i{
+    color: var(--icon-theme);
+    font-size: 1.5rem;
+
+}
+
+.menu-social i:hover {
+    color: var(--hover-link);
 }
 
 /* Responsividade */
@@ -272,12 +293,17 @@ p {
 
     }
 
+    .header-logo {
+        min-width: 20%; /*centralização do logo*/
+    }
+
 }
+
 
 /*Telas > 992px */
 @media (min-width: 992px) {
     h1 {
-        font-size: 6rem;
+        font-size: 3rem;
 
     }
 
